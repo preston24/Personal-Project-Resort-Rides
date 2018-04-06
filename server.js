@@ -34,6 +34,7 @@ passport.use(
       clientID: process.env.AUTH_CLIENT_ID,
       clientSecret: process.env.AUTH_CLIENT_SECRET,
       callbackURL: process.env.AUTH_CALLBACK,
+      scope: "openid profile"
     },
     (accessToken, refreshToken, extraParams, profile, done) => {
 
