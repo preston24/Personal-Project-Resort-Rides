@@ -92,6 +92,9 @@ app.get("/auth/me", (req, res) => {
 });
 
 
+//rides endpoints
+
+
 
 app.listen(port, () => {
   console.log('listening on port', port);

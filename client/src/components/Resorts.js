@@ -9,12 +9,12 @@ export default function(props) {
         <Link to={'/'}><button className="resorts-page-logout-btn">Logout</button></Link>
       </div>
         <div className="resorts-buttons">
-          <button className="brighton-btn"> Brighton </button>
-          <button className="solitude-btn"> Solitude </button> 
-          <button className="snowbird-btn"> Snowbird </button>
-          <button className="alta-btn"> Alta </button>
-          <button className="snowbasin-btn"> Snowbasin </button>
-          <button className="powdermountain-btn"> Powder Mountain </button>
+          <Link to={'/brighton'}><button className="brighton-btn"> Brighton </button></Link>
+          <Link to={'/solitude'}><button className="solitude-btn"> Solitude </button></Link>
+          <Link to={'/snowbird'}><button className="snowbird-btn"> Snowbird </button></Link>
+          <Link to={'/alta'}><button className="alta-btn"> Alta </button></Link>
+          <Link to={'/snowbasin'}><button className="snowbasin-btn"> Snowbasin </button></Link>
+          <Link to={'/powderMountain'}><button className="powdermountain-btn"> Powder Mountain </button></Link>
         </div>
     </div>
   )
