@@ -5,8 +5,11 @@ const cors = require('cors');
 const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
+const ridesResorts = require('./controllers/ridesResorts')
+
 
 require('dotenv').config();
+
 
 const app = express();
 const port = 9090;
@@ -41,16 +44,15 @@ passport.use(
       const db = app.get('db');
       db.get_user_by_auth_id({ auth_id: profile.id }).then(results => {
         let user = results[0];
-console.log(11111, profile)
+
         if (user) {
-          console.log(2222222, user)
           return done(null, user)
         } else {
           let userObj = {
             username: profile.displayName,
             auth_id: profile.id
           }
-          console.log(333333333, userObj)
+          
           db.create_user(userObj).then(results => {
             let user = results[0];
             return done(null, user)
@@ -83,17 +85,15 @@ app.get(
   })
 );
 
-app.get("/auth/me", (req, res) => {
-  if (req.isAuthenticated()) {
-    return res.send(req.user);
-  } else {
-    return res.status(404).send("user not authenticated");
-  }
-});
+// app.get("/auth/me", (req, res) => {
+//   if (req.isAuthenticated()) {
+//     return res.send(req.user);
+//   } else {
+//     return res.status(404).send("user not authenticated");
+//   }
+// });
 
-
-//rides endpoints
-
+app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
 
 
 app.listen(port, () => {

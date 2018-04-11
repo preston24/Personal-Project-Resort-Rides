@@ -69,7 +69,7 @@
   background-image: url('https://orig00.deviantart.net/829e/f/2011/160/a/a/brighton_mountain__utah__panor_by_tiller630-d3ihzpa.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 805px;
 }
 
 .brighton-btn {
@@ -138,11 +138,25 @@
   outline: none !important;
 }
 
+.back-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border: none;
+  font-family: 'Gugi', sans-serif;
+  border-radius: 3em;
+  padding: 5px 5px 5px;
+  outline: none !important;
+  margin-top: 10px;
+  margin-left: 1350px;
+}
+
 .brighton-msg {
   background-image: url('https://www.skinsee.com/resources/images/bnr1-resort-brighton.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 705px;
+  height: 805px;
 }
 
 .solitude-msg {
@@ -156,26 +170,26 @@
   background-image: url('https://www.skinsee.com/resources/images/bnr1-resort-snowbird.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 705px; 
+  height: 805px; 
 }
 
 .alta-msg {
   background-image: url('https://nwt3k.com/blog/wp-content/uploads/2016/01/Alta_pistemap.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 705px;
+  height: 805px;
 }
 
 .snowbasin-msg {
   background-image: url('https://www.visitogden.com/imager/files_idssasp_com/public/C138/9e7f71d6-061e-4997-ab59-46bb8483dda5_52300f0f612b49ced2935b804ede9f32.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 705px;
+  height: 805px;
 }
 
 .powdermountain-msg {
   background-image: url('https://media.deseretdigital.com/file/34a48b6746?crop=top:0|left:0|width:1260|height:670|gravity:Center&quality=55&interlace=none&resize=width:1260&order=resize,crop&c=14&a=e0f131f0');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 705px;
+  height: 805px;
 }
