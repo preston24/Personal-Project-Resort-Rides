@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi');
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 
+a {
+  text-decoration: none;
+}
+
 .login-page {
   display: flex;
   flex-direction: column;
@@ -139,6 +143,7 @@
 }
 
 .back-btn {
+  display: flex;
   cursor: pointer;
   font-size: 15px;
   color: white;
@@ -165,10 +170,7 @@
   width: 200px;
   height: 400px;
   border-radius: 3em;
-  border: none;
   padding: 5px 10px 5px;
-  cursor: pointer;
-  outline: none !important;
 }
 
 .brighton-msg {

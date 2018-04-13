@@ -22,16 +22,18 @@ export default class Solitude extends Component {
   render() {
   return (
     <div className="solitude-msg">
-      <Link to={'/resorts'}><button className="back-btn"> Back to Resorts Page </button></Link>
+      <div>
+        <Link to={'/resorts'}><button className="back-btn"> Back to Resorts Page </button></Link>
+      </div>
 
-        {this.state.rides.map((ride, index) => {
-          return <button className="rides-info" key={index}>
-            <h5>{ride.username}</h5>
-            <h5>Seats{ride.seats}</h5>
-            <h5>${ride.price}</h5>
-            <h5>{ride.time}</h5>
-          </button>
-        })}
+          {this.state.rides.map((ride, index) => {
+            return <div className="rides-info" key={index}>
+              <h5>{ride.username}</h5>
+              <h5>Seats{ride.seats}</h5>
+              <h5>${ride.price}</h5>
+              <h5>{ride.time}</h5>
+            </div>
+          })}
     </div>
   )
  }
