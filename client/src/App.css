@@ -165,7 +165,10 @@
   width: 200px;
   height: 400px;
   border-radius: 3em;
+  border: none;
   padding: 5px 10px 5px;
+  cursor: pointer;
+  outline: none !important;
 }
 
 .brighton-msg {

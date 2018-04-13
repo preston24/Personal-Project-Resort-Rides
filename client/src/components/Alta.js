@@ -25,12 +25,12 @@ export default class Alta extends Component {
       <Link to={'/resorts'}><button className="back-btn"> Back to Resorts Page </button></Link>
 
         {this.state.rides.map((ride, index) => {
-          return <div className="rides-info" key={index}>
+          return <button className="rides-info" key={index}>
               <h5>{ride.username}</h5>
               <h5>Seats{ride.seats}</h5>
               <h5>${ride.price}</h5>
               <h5>{ride.time}</h5>
-            </div>
+            </button>
         })}
     </div>
   )
