@@ -93,6 +93,7 @@ app.get(
 //   }
 // });
 
+//Rides Endpoints
 app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
 
 

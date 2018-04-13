@@ -140,19 +140,36 @@
 
 .back-btn {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
   color: white;
   background-color: black;
   border: none;
   font-family: 'Gugi', sans-serif;
   border-radius: 3em;
-  padding: 5px 5px 5px;
+  padding: 10px 10px 10px;
   outline: none !important;
   margin-top: 10px;
-  margin-left: 1350px;
+  margin-left: 10px;
+}
+
+.rides-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+  margin-top: 200px;
+  font-size: 20px;
+  width: 200px;
+  height: 400px;
+  border-radius: 3em;
+  padding: 5px 10px 5px;
 }
 
 .brighton-msg {
+  display: flex;
   background-image: url('https://www.skinsee.com/resources/images/bnr1-resort-brighton.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,6 +177,7 @@
 }
 
 .solitude-msg {
+  display: flex;
   background-image: url('https://snowbrains.com/wp-content/uploads/2013/11/solitude_logo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -167,6 +185,7 @@
 }
 
 .snowbird-msg {
+  display: flex;
   background-image: url('https://www.skinsee.com/resources/images/bnr1-resort-snowbird.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -174,6 +193,7 @@
 }
 
 .alta-msg {
+  display: flex;
   background-image: url('https://nwt3k.com/blog/wp-content/uploads/2016/01/Alta_pistemap.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -181,6 +201,7 @@
 }
 
 .snowbasin-msg {
+  display: flex;
   background-image: url('https://www.visitogden.com/imager/files_idssasp_com/public/C138/9e7f71d6-061e-4997-ab59-46bb8483dda5_52300f0f612b49ced2935b804ede9f32.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -188,6 +209,7 @@
 }
 
 .powdermountain-msg {
+  display: flex;
   background-image: url('https://media.deseretdigital.com/file/34a48b6746?crop=top:0|left:0|width:1260|height:670|gravity:Center&quality=55&interlace=none&resize=width:1260&order=resize,crop&c=14&a=e0f131f0');
   background-repeat: no-repeat;
   background-size: cover;
