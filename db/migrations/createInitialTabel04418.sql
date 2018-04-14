@@ -9,7 +9,7 @@ CREATE TABLE users (
 CREATE TABLE resorts (
     id SERIAL PRIMARY KEY,
     resort_name VARCHAR,
-    img_url TEXT
+    img_url VARCHAR
 );
 
 CREATE TABLE rides (

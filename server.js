@@ -5,7 +5,8 @@ const cors = require('cors');
 const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
-const ridesResorts = require('./controllers/ridesResorts')
+const ridesResorts = require('./controllers/ridesResorts');
+const getResorts = require("./controllers/getResorts");
 
 
 require('dotenv').config();
@@ -95,6 +96,9 @@ app.get(
 
 //Rides Endpoints
 app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
+
+//Resorts Endpoints
+app.get('/api/resorts/', getResorts.getResorts);
 
 
 app.listen(port, () => {
