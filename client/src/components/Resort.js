@@ -38,7 +38,7 @@ class Resort extends Component {
 
   render() {
   return (
-    <div className="brighton-msg" style={this.state.resort && {backgroundImage: `url(${this.state.resort.img_url})`}}>
+    <div className="resort-page" style={this.state.resort && {backgroundImage: `url(${this.state.resort.img_url})`}}>
       <div>
         <Link to={'/resorts'}><button className="back-btn"> Back to Resorts Page </button></Link>
       </div>

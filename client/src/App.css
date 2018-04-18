@@ -76,63 +76,8 @@ a {
   height: 805px;
 }
 
-.brighton-btn {
-  margin-top: 120px;
-  font-size: 40px;
-  font-family: 'Monoton';
-  cursor: pointer;
-  border: none;
-  border-radius: 3em;
-  background-color: #4ab5ef;
-  outline: none !important;
-}
-
-.solitude-btn {
-  margin-top: 10px;
-  font-size: 40px;
-  font-family: 'Monoton';
-  cursor: pointer;
-  border: none;
-  border-radius: 3em;
-  background-color: #4ab5ef;
-  outline: none !important;
-}
-
-.snowbird-btn {
-  margin-top: 10px;
-  font-size: 40px;
-  font-family: 'Monoton';
-  cursor: pointer;
-  border: none;
-  border-radius: 3em;
-  background-color: #4ab5ef;
-  outline: none !important;
-}
-
-.alta-btn {
-  margin-top: 10px;
-  font-size: 40px;
-  font-family: 'Monoton';
-  cursor: pointer;
-  border: none;
-  border-radius: 3em;
-  background-color: #4ab5ef;
-  outline: none !important;
-}
-
-.snowbasin-btn {
-  margin-top: 10px;
-  font-size: 40px;
-  font-family: 'Monoton';
-  cursor: pointer;
-  border: none;
-  border-radius: 3em;
-  background-color: #4ab5ef;
-  outline: none !important;
-}
-
-.powdermountain-btn {
-  margin-top: 10px;
+.resorts-btn {
+  margin-top: 40px;
   font-size: 40px;
   font-family: 'Monoton';
   cursor: pointer;
@@ -171,53 +116,12 @@ a {
   height: 400px;
   border-radius: 3em;
   padding: 5px 10px 5px;
-  margin-left: 190px;
+  margin-left: 93px;
 }
 
-.brighton-msg {
+.resort-page {
   display: flex;
-  background-image: url('https://www.skinsee.com/resources/images/bnr1-resort-brighton.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 805px;
-}
-
-.solitude-msg {
-  display: flex;
-  background-image: url('https://snowbrains.com/wp-content/uploads/2013/11/solitude_logo.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 680px;
-}
-
-.snowbird-msg {
-  display: flex;
-  background-image: url('https://www.skinsee.com/resources/images/bnr1-resort-snowbird.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 805px; 
-}
-
-.alta-msg {
-  display: flex;
-  background-image: url('https://nwt3k.com/blog/wp-content/uploads/2016/01/Alta_pistemap.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 805px;
-}
-
-.snowbasin-msg {
-  display: flex;
-  background-image: url('https://www.visitogden.com/imager/files_idssasp_com/public/C138/9e7f71d6-061e-4997-ab59-46bb8483dda5_52300f0f612b49ced2935b804ede9f32.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 805px;
-}
-
-.powdermountain-msg {
-  display: flex;
-  background-image: url('https://media.deseretdigital.com/file/34a48b6746?crop=top:0|left:0|width:1260|height:670|gravity:Center&quality=55&interlace=none&resize=width:1260&order=resize,crop&c=14&a=e0f131f0');
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 805px;
 }
