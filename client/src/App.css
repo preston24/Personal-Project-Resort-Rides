@@ -125,3 +125,9 @@ a {
   background-repeat: no-repeat;
   height: 805px;
 }
+
+.modal-input {
+  font-size: 25px;
+  width: 400px;
+  height: 100px;
+}

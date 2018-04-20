@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'
+// import axios from 'axios'
 import { connect } from 'react-redux'
 
 import { getResorts } from '../redux/reducers/resorts';
+import { bookRide, getRides } from '../redux/reducers/rides';
+
+// import Modal from './Modal';
 
 class Resort extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      rides: [],
       resort: {
+        id: null,
         resort_name: '',
         img_url: ''
       }
@@ -29,12 +32,9 @@ class Resort extends Component {
       this.setState({ resort: this.props.resortsObj[id]})
     }
 
-    axios.get(`/api/ride_resort/${id}`).then(response => {
-      this.setState({
-        rides: response.data
-      });
-    });
+    this.props.getRides(id);
   }
+
 
   render() {
   return (
@@ -43,12 +43,13 @@ class Resort extends Component {
         <Link to={'/resorts'}><button className="back-btn"> Back to Resorts Page </button></Link>
       </div>
 
-          {this.state.rides.map((ride, index) => {
+          {this.props.rides.map((ride, index) => {
             return <div className="rides-info" key={index}>
               <h5>{ride.username}</h5>
               <h5>Seats{ride.seats}</h5>
               <h5>${ride.price}</h5>
               <h5>{ride.time}</h5>
+              <button onClick={() => this.props.bookRide(ride.ride_id, ride.seats, ride.resort_id)}>Book Ride</button>
             </div>
         })}
     </div>
@@ -58,7 +59,8 @@ class Resort extends Component {
 
 function mapStateToProps (state) {
   const { resortsObj } = state.resorts
-  return { resortsObj }
+  const { rides } = state.rides
+  return { resortsObj, rides }
 }
 
-export default connect(mapStateToProps, { getResorts })(Resort)
+export default connect(mapStateToProps, { getResorts, getRides, bookRide })(Resort)

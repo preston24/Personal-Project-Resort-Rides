@@ -96,6 +96,7 @@ app.get(
 
 //Rides Endpoints
 app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
+app.put('/api/rides/:id/:seats', ridesResorts.bookRide)
 
 //Resorts Endpoints
 app.get('/api/resorts/', getResorts.getResorts);
