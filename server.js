@@ -86,6 +86,11 @@ app.get(
   })
 );
 
+app.get('/auth/logout', (req, res) => {
+  req.logout()
+  res.redirect('/')
+})
+
 // app.get("/auth/me", (req, res) => {
 //   if (req.isAuthenticated()) {
 //     return res.send(req.user);
