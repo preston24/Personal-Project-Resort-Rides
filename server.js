@@ -5,6 +5,8 @@ const cors = require('cors');
 const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
+
+//controllers
 const ridesResorts = require('./controllers/ridesResorts');
 const getResorts = require("./controllers/getResorts");
 
@@ -102,6 +104,7 @@ app.get('/auth/logout', (req, res) => {
 //Rides Endpoints
 app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
 app.put('/api/rides/:id/:seats', ridesResorts.bookRide)
+app.post('/api/rides/', ridesResorts.addRide)
 
 //Resorts Endpoints
 app.get('/api/resorts/', getResorts.getResorts);

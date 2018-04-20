@@ -52,6 +52,14 @@ class Resort extends Component {
               <button onClick={() => this.props.bookRide(ride.ride_id, ride.seats, ride.resort_id)}>Book Ride</button>
             </div>
         })}
+          
+          <div>
+            {this.props.rides.map((ride, index) => {
+              return <div key={index}>
+                <button onClick={() => this.props.addRide(ride.username, ride.seats, ride.price, ride.time)}>Add Ride</button>
+              </div>
+            })}
+          </div>
     </div>
   )
  }

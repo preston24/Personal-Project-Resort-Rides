@@ -6,6 +6,7 @@ const initialState = {
 
 const BOOK_RIDE = 'BOOK_RIDE'
 const GET_RIDES = 'GET_RIDES'
+const ADD_RIDE = 'ADD_RIDE'
 
 export default function rides(state = initialState, action) {
   switch (action.type) {
@@ -13,6 +14,8 @@ export default function rides(state = initialState, action) {
       return { ...state, rides: action.payload }
     case BOOK_RIDE + '_FULFILLED': 
       return { ...state, rides: action.payload}
+    case ADD_RIDE + '_FULFILLED':
+      return {...state, rides: action.payload}
     default:
       return state
     }
@@ -32,6 +35,15 @@ export function getRides(id) {
   return {
     type: GET_RIDES,
     payload: axios.get(`/api/ride_resort/${id}`).then(response => {
+      return response.data
+    })
+  }
+}
+
+export function addRide(id) {
+  return {
+    type: ADD_RIDE,
+    payload: axios.post('/api/rides').then(response => {
       return response.data
     })
   }
