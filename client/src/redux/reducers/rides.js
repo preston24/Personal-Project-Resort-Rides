@@ -35,5 +35,4 @@ export function getRides(id) {
       return response.data
     })
   }
-  
 }

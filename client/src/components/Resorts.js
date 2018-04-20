@@ -19,7 +19,7 @@ import { getResorts } from '../redux/reducers/resorts';
         </div>
           <div className="resorts-buttons">
             {this.props.resorts.map((resort, index) => {
-              return <Link to={`/resorts/${resort.id}`} key={index}><button className="resorts-btn"> {resort.resort_name} </button></Link>
+              return <Link to={`/resorts/${resort.id}`} key={index}><button className="resorts-btn">{resort.resort_name}</button></Link>
             })}
           </div>
       </div>
