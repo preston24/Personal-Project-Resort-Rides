@@ -1,2 +1,4 @@
-INSERT INTO rides (username, seats, price, date, time)
-VALUES($1, $2, $3, $4, $5);
+INSERT INTO rides (seats, price, time, user_id)
+VALUES($1, $2, $3, $4)
+
+RETURNING id;

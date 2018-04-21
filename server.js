@@ -10,6 +10,9 @@ const Auth0Strategy = require('passport-auth0');
 const ridesResorts = require('./controllers/ridesResorts');
 const getResorts = require("./controllers/getResorts");
 
+//middleware
+const isAuthenticated = require('./middleware/isAuthenticated')
+
 
 require('dotenv').config();
 
@@ -93,21 +96,24 @@ app.get('/auth/logout', (req, res) => {
   res.redirect('/')
 })
 
-// app.get("/auth/me", (req, res) => {
-//   if (req.isAuthenticated()) {
-//     return res.send(req.user);
-//   } else {
-//     return res.status(404).send("user not authenticated");
-//   }
-// });
+app.get("/auth/me", (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.send(req.user);
+  } else {
+    return res.status(404).send("user not authenticated");
+  }
+});
 
 //Rides Endpoints
-app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
-app.put('/api/rides/:id/:seats', ridesResorts.bookRide)
-app.post('/api/rides/', ridesResorts.addRide)
+app.get('/api/ride_resort/:id', isAuthenticated, ridesResorts.getRidesResortByResortID);
+app.put('/api/rides/:id/:seats', isAuthenticated, ridesResorts.bookRide)
+app.post('/api/rides/', isAuthenticated, ridesResorts.addRide)
+app.delete('/api/rides/:id', isAuthenticated, ridesResorts.deleteRide)
 
 //Resorts Endpoints
-app.get('/api/resorts/', getResorts.getResorts);
+app.get('/api/resorts/', isAuthenticated, getResorts.getResorts);
+
+
 
 
 app.listen(port, () => {

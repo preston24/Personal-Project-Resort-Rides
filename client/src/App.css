@@ -121,13 +121,15 @@ a {
 
 .resort-page {
   display: flex;
+  flex-wrap: wrap;
   background-size: cover;
   background-repeat: no-repeat;
   height: 805px;
 }
 
-.modal-input {
-  font-size: 25px;
-  width: 400px;
-  height: 100px;
+.add-ride-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
 }

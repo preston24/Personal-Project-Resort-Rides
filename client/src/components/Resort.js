@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 import { getResorts } from '../redux/reducers/resorts';
-import { bookRide, getRides } from '../redux/reducers/rides';
+import { bookRide, getRides, addRide, deleteRide } from '../redux/reducers/rides';
 
 // import Modal from './Modal';
 
@@ -35,6 +35,13 @@ class Resort extends Component {
     this.props.getRides(id);
   }
 
+  handleAddRide = () => {
+    const { id } = this.props.match.params
+
+    this.props.addRide(this.state.seats, this.state.price, this.state.time, this.state.resort.id, this.props.user.id).then(() => {
+      this.props.getRides(id)
+    })
+  }
 
   render() {
   return (
@@ -50,25 +57,29 @@ class Resort extends Component {
               <h5>${ride.price}</h5>
               <h5>{ride.time}</h5>
               <button onClick={() => this.props.bookRide(ride.ride_id, ride.seats, ride.resort_id)}>Book Ride</button>
+              <button onClick={() => this.props.deleteRide(ride.ride_id)}>Delete Ride</button>
             </div>
         })}
           
-          <div>
-            {this.props.rides.map((ride, index) => {
-              return <div key={index}>
-                <button onClick={() => this.props.addRide(ride.username, ride.seats, ride.price, ride.time)}>Add Ride</button>
+          <div className='add-ride-info'>
+              <div>
+                <button onClick={this.handleAddRide}>Add Ride</button>
               </div>
-            })}
+                <div>
+                  <input onChange={(e) => this.setState({ seats: e.target.value })} placeholder="Seats"></input>
+                  <input onChange={ (e) => this.setState({ price: e.target.value })} placeholder="Price"></input>
+                  <input onChange={ (e) => this.setState({ time: e.target.value })} placeholder="Time"></input>
+                </div>
           </div>
     </div>
   )
  }
-}
+} 
 
 function mapStateToProps (state) {
-  const { resortsObj } = state.resorts
+  const { resortsObj, user } = state.resorts
   const { rides } = state.rides
-  return { resortsObj, rides }
+  return { resortsObj, rides, user }
 }
 
-export default connect(mapStateToProps, { getResorts, getRides, bookRide })(Resort)
+export default connect(mapStateToProps, { getResorts, getRides, bookRide, addRide, deleteRide })(Resort)
