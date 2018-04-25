@@ -12,4 +12,4 @@ export default function(props) {
 
 
 
-{/* <a onClick={() => axios.get("http://localhost:9090/auth", {headers: { 'Access-Control-Allow-Origin': '*'}}).then(response => console.log('response', response))}><button>Login</button></a> */}
+/* <a onClick={() => axios.get("http://localhost:9090/auth", {headers: { 'Access-Control-Allow-Origin': '*'}}).then(response => console.log('response', response))}><button>Login</button></a> */

@@ -28,7 +28,6 @@ module.exports = {
     const { seats, price, time, resortId, userId } = req.body
     
     db.add_ride([Number(seats), Number(price), time, Number(userId)]).then(response => {
-      
       const rideId = response[0].id
       db.add_ride_resort(rideId, resortId).then(response => {
         res.send('Ok')
@@ -40,7 +39,7 @@ module.exports = {
     const db = req.app.get('db')
     const { id } = req.params
 
-    db.delete_ride(id).then(rides => {
+    db.delete_ride([id]).then(rides => {
       res.send(rides)
     })
   }

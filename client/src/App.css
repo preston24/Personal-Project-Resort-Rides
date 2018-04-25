@@ -119,6 +119,26 @@ a {
   margin-left: 93px;
 }
 
+.book-btn {
+  font-family: 'Gugi', sans-serif;
+  font-size: 13px;
+  background-color: black;
+  color: white;
+  border-radius: 3em;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.delete-btn {
+  font-family: 'Gugi', sans-serif;
+  font-size: 13px;
+  background-color: black;
+  color: white;
+  border-radius: 3em;
+  outline: none !important;
+  cursor: pointer;
+}
+
 .resort-page {
   display: flex;
   flex-wrap: wrap;
@@ -132,4 +152,28 @@ a {
   flex-direction: row;
   margin-left: 20px;
   margin-top: 20px;
+  top: 0;
+  right: 10px;
+  position: absolute;
+}
+
+.add-ride-btn {
+  margin-left: 10px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none !important;
+  font-family: 'Gugi', sans-serif;
+  border-radius: 3em;
+  cursor: pointer;
+}
+
+.add-ride-input {
+  margin-left: 10px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none !important;
 }
