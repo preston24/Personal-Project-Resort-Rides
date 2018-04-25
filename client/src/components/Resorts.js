@@ -19,7 +19,7 @@ import { getResorts, saveUser } from '../redux/reducers/resorts';
       <div>
         <div className="resorts-page">
           <h1> Resort Rides </h1>
-          <Link to={'/'}><button className="resorts-page-logout-btn">Logout</button></Link>
+          <a href="http://localhost:9090/auth/logout"><button className="resorts-page-logout-btn">Logout</button></a> 
         </div>
           <div className="resorts-buttons">
             {this.props.resorts.map((resort, index) => {

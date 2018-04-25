@@ -93,8 +93,8 @@ app.get(
 
 app.get('/auth/logout', (req, res) => {
   req.logout()
-  res.redirect('/')
-})
+  res.redirect('http://localhost:3000/#/')
+});
 
 app.get("/auth/me", (req, res) => {
   if (req.isAuthenticated()) {
