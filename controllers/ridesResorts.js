@@ -18,7 +18,6 @@ module.exports = {
         })
       }) 
     } catch (error) {
-      console.error('we have an error booking a ride:', error)
       res.status(500).send(error)
     }
   },

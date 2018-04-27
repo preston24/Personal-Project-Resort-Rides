@@ -12,6 +12,7 @@ a {
   align-items: center;
   background-image: url('https://robertdebry.com/wp-content/uploads/2017/11/shutterstock_471974153.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 805px;
 }
@@ -72,6 +73,7 @@ a {
   align-items: center;
   background-image: url('https://orig00.deviantart.net/829e/f/2011/160/a/a/brighton_mountain__utah__panor_by_tiller630-d3ihzpa.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 805px;
 }
@@ -144,6 +146,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 805px;
 }
