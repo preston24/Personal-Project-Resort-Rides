@@ -26,7 +26,7 @@ export default function rides(state = initialState, action) {
 }
 
 export function bookRide(id, seats, resort_id) {
-  const newSeats = seats - 1;
+  const newSeats = seats - 1
   return {
     type: BOOK_RIDE,
     payload: axios.put(`/api/rides/${id}/${newSeats}?resort_id=${resort_id}`).then(response => {

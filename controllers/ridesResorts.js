@@ -16,7 +16,7 @@ module.exports = {
         db.get_rideresort_by_resortid(Number(resort_id)).then(rides => {
           res.send(rides)
         })
-      }) 
+      })
     } catch (error) {
       res.status(500).send(error)
     }

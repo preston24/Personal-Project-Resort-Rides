@@ -123,8 +123,8 @@ app.listen(port, () => {
 
 
 // app.get('/api/ride_resort/:id', isAuthenticated, ridesResorts.getRidesResortByResortID);
-// app.put('/api/rides/:id/:seats', isAuthenticated, ridesResorts.bookRide)
-// app.post('/api/rides/', isAuthenticated, ridesResorts.addRide)
-// app.delete('/api/rides/:id', isAuthenticated, ridesResorts.deleteRide)
+// app.put('/api/rides/:id/:seats', isAuthenticated, ridesResorts.bookRide);
+// app.post('/api/rides/', isAuthenticated, ridesResorts.addRide);
+// app.delete('/api/rides/:id', isAuthenticated, ridesResorts.deleteRide);
 
 // app.get('/api/resorts/', isAuthenticated, getResorts.getResorts);

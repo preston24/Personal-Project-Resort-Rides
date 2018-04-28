@@ -36,6 +36,7 @@ a {
   padding: 10px 10px 10px;
   width: 100px;
   outline: none !important;
+  box-shadow: -5px 5px 10px;
 }
 
 .resorts-page {
@@ -65,6 +66,7 @@ a {
   font-size: 20px;
   font-family: 'Gugi', sans-serif;
   outline: none !important;
+  box-shadow: -5px 5px 10px #6CD0FF;
 }
 
 .resorts-buttons {
@@ -87,6 +89,7 @@ a {
   border-radius: 3em;
   background-color: #4ab5ef;
   outline: none !important;
+  box-shadow: -7px 7px 10px;
 }
 
 .back-btn {
@@ -159,6 +162,15 @@ a {
   top: 0;
   right: 10px;
   position: absolute;
+}
+
+.modal {
+  color: black;
+  font-family: 'Gugi', sans-serif;
+}
+
+.modal-close {
+  color: red;
 }
 
 .add-ride-btn {
