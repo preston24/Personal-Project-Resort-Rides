@@ -107,22 +107,29 @@ a {
   margin-left: 10px;
 }
 
+.rides-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 93px;
+  background-color: black;
+  opacity: 0.7;
+  margin-top: 150px;
+  border-radius: 3em;
+}
+
 .rides-info {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
   color: white;
-  background-color: black;
-  opacity: 0.7;
-  margin-top: 200px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Gugi', sans-serif;
-  width: 200px;
-  height: 400px;
-  border-radius: 3em;
+  height: 70%;
+  width: 100%;
   padding: 5px 10px 5px;
-  margin-left: 93px;
 }
 
 .book-btn {
@@ -133,6 +140,7 @@ a {
   border-radius: 3em;
   outline: none !important;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .delete-btn {

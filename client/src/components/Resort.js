@@ -61,13 +61,15 @@ class Resort extends Component {
       </div>
 
           {this.props.rides.map((ride, index) => {
-            return <div className="rides-info" key={index}>
-              <h5>{ride.username}</h5>
-              <h5>Seats{ride.seats}</h5>
-              <h5>${ride.price}</h5>
-              <h5>{ride.time}</h5>
-              <button className='book-btn' onClick={() => this.bookRide(ride)}>Book Ride</button>
-              <button className='delete-btn' onClick={() => this.props.deleteRide(ride.ride_id, this.props.match.params.id)}>Delete Ride</button>
+            return <div className="rides-container" key={index}>
+              <div className="rides-info">
+                <div>{ride.username}</div>
+                <div>Seats{ride.seats}</div>
+                <div>${ride.price}</div>
+                <div>{ride.time}</div>
+                <button className='book-btn' onClick={() => this.bookRide(ride)}>Book Ride</button>
+                <button className='delete-btn' onClick={() => this.props.deleteRide(ride.ride_id, this.props.match.params.id)}>Delete Ride</button>
+              </div>
             </div>
         })}
           
