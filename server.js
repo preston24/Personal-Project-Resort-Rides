@@ -104,14 +104,24 @@ app.get("/auth/me", (req, res) => {
   }
 });
 
-//Rides Endpoints
-app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
-app.put('/api/rides/:id/:seats', ridesResorts.bookRide)
-app.post('/api/rides/', ridesResorts.addRide)
-app.delete('/api/rides/:id', ridesResorts.deleteRide)
+// //Rides Endpoints
+// app.get('/api/ride_resort/:id', ridesResorts.getRidesResortByResortID);
+// app.put('/api/rides/:id/:seats', ridesResorts.bookRide)
+// app.post('/api/rides/', ridesResorts.addRide)
+// app.delete('/api/rides/:id/:userId', ridesResorts.deleteRide)
 
-//Resorts Endpoints
-app.get('/api/resorts/', getResorts.getResorts);
+// //Resorts Endpoints
+// app.get('/api/resorts/', getResorts.getResorts);
+
+
+
+app.get('/api/ride_resort/:id', isAuthenticated, ridesResorts.getRidesResortByResortID);
+app.put('/api/rides/:id/:seats', isAuthenticated, ridesResorts.bookRide);
+app.post('/api/rides/', isAuthenticated, ridesResorts.addRide);
+app.delete('/api/rides/:id/:userId', isAuthenticated, ridesResorts.deleteRide);
+
+app.get('/api/resorts/', isAuthenticated, getResorts.getResorts);
+
 
 
 
@@ -125,6 +135,6 @@ app.listen(port, () => {
 // app.get('/api/ride_resort/:id', isAuthenticated, ridesResorts.getRidesResortByResortID);
 // app.put('/api/rides/:id/:seats', isAuthenticated, ridesResorts.bookRide);
 // app.post('/api/rides/', isAuthenticated, ridesResorts.addRide);
-// app.delete('/api/rides/:id', isAuthenticated, ridesResorts.deleteRide);
+// app.delete('/api/rides/:id/:userId', isAuthenticated, ridesResorts.deleteRide);
 
 // app.get('/api/resorts/', isAuthenticated, getResorts.getResorts);

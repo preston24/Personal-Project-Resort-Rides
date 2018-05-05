@@ -72,6 +72,7 @@ a {
 .resorts-buttons {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   background-image: url('https://orig00.deviantart.net/829e/f/2011/160/a/a/brighton_mountain__utah__panor_by_tiller630-d3ihzpa.jpg');
   background-repeat: no-repeat;
@@ -127,7 +128,7 @@ a {
   color: white;
   font-size: 18px;
   font-family: 'Gugi', sans-serif;
-  height: 70%;
+  height: 85%;
   width: 100%;
   padding: 5px 10px 5px;
 }
@@ -140,7 +141,6 @@ a {
   border-radius: 3em;
   outline: none !important;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 
 .delete-btn {

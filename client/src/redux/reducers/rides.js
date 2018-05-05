@@ -13,10 +13,10 @@ export default function rides(state = initialState, action) {
   switch (action.type) {
     case GET_RIDES + '_FULFILLED':
       return { ...state, rides: action.payload }
-    case BOOK_RIDE + '_FULFILLED': 
+    case BOOK_RIDE + '_FULFILLED':
       return { ...state, rides: action.payload }
     case ADD_RIDE + '_FULFILLED':
-      return state 
+      return state
       return { ...state, rides: action.payload }
     case DELETE_RIDE + '_FULFILLED':
     return { ...state, rides: action.payload.data }
@@ -49,8 +49,8 @@ export function addRide(seats, price, time, resortId, userId) {
     type: ADD_RIDE,
     payload: axios.post('/api/rides', {
       seats,
-      price, 
-      time, 
+      price,
+      time,
       resortId,
       userId
     }).then(response => {
@@ -59,9 +59,10 @@ export function addRide(seats, price, time, resortId, userId) {
   }
 }
 
-export function deleteRide(id, resortId) {
+export function deleteRide(id, resortId, userId) {
+  console.log('this is userId', userId)
   return {
     type: DELETE_RIDE,
-    payload: axios.delete(`/api/rides/${id}`).then(() => axios.get('/api/ride_resort/' + resortId))
+    payload: axios.delete(`/api/rides/${id}/${userId}`).then(() => axios.get('/api/ride_resort/' + resortId))
   }
 }

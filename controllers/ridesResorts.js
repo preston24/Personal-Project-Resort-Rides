@@ -25,7 +25,7 @@ module.exports = {
   addRide: (req, res, next) => {
     const db = req.app.get('db')
     const { seats, price, time, resortId, userId } = req.body
-    
+  
     db.add_ride([Number(seats), Number(price), time, Number(userId)]).then(response => {
       const rideId = response[0].id
       db.add_ride_resort(rideId, resortId).then(response => {
@@ -36,9 +36,9 @@ module.exports = {
 
   deleteRide: (req, res, next) => {
     const db = req.app.get('db')
-    const { id } = req.params
+    const { id, userId } = req.params
 
-    db.delete_ride([id]).then(rides => {
+    db.delete_ride([id, userId]).then(rides => {
       res.send(rides)
     })
   }
