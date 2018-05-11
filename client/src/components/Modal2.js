@@ -24,9 +24,9 @@ export default class Modals extends Component {
                     effect="fadeInUp"
                     onClickAway={() => this.closeModal()}
                 >
-                    <div className="modal">
+                    <div className="modal2">
                         <h1>You do not have permission to delete this ride! </h1>
-                        <a className="modal-close" href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                        <a className="modal-close2" href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </div>
                 </Modal2>
             </section>

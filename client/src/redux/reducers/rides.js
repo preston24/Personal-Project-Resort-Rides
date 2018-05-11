@@ -60,7 +60,6 @@ export function addRide(seats, price, time, resortId, userId) {
 }
 
 export function deleteRide(id, resortId, userId) {
-  console.log('this is userId', userId)
   return {
     type: DELETE_RIDE,
     payload: axios.delete(`/api/rides/${id}/${userId}`).then(() => axios.get('/api/ride_resort/' + resortId))

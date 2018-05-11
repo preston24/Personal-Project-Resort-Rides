@@ -181,6 +181,15 @@ a {
   color: red;
 }
 
+.modal2 {
+  background-color: red;
+  color: white;
+}
+
+.modal-close2 {
+  color: white;
+}
+
 .add-ride-btn {
   margin-left: 10px;
   font-size: 15px;
@@ -200,4 +209,19 @@ a {
   color: white;
   border: none;
   outline: none !important;
+}
+
+@media only screen and (max-width: 830px) {
+  .add-ride-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .rides-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

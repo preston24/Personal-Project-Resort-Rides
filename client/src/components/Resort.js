@@ -49,12 +49,17 @@ class Resort extends Component {
 
   bookRide = (ride) => {
     this.props.bookRide(ride.ride_id, ride.seats, ride.resort_id)
-    this.setState({ showBookRideModal : true})
+    this.setState({ showBookRideModal: true})
   }
 
   deleteRide = (ride) => {
     this.props.deleteRide(ride.ride_id, this.props.match.params.id, this.props.user.id)
-    this.setState({ showDeleteRideModal: true })
+    console.log(ride)
+    if (this.props.user.id !== ride.user_id) {
+      this.setState({ showDeleteRideModal: true })
+    } else {
+      this.setState({ showDeleteRideModal: false })
+    }
   }
 
 
