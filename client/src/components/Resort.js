@@ -54,7 +54,7 @@ class Resort extends Component {
 
   deleteRide = (ride) => {
     this.props.deleteRide(ride.ride_id, this.props.match.params.id, this.props.user.id)
-    console.log(ride)
+
     if (this.props.user.id !== ride.user_id) {
       this.setState({ showDeleteRideModal: true })
     } else {
