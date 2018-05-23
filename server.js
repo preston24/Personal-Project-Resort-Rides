@@ -86,14 +86,14 @@ app.get("/auth", passport.authenticate("auth0"));
 app.get(
   "/auth/callback",
   passport.authenticate("auth0", {
-    successRedirect: "http://localhost:3000/#/resorts",
-    failureRedirect: "http://localhost:3000/#/"
+    successRedirect: "/#/resorts",
+    failureRedirect: "/#/"
   })
 );
 
 app.get('/auth/logout', (req, res) => {
   req.logout()
-  res.redirect('http://localhost:3000/#/')
+  res.redirect('/#/')
 });
 
 app.get("/auth/me", (req, res) => {
@@ -103,6 +103,10 @@ app.get("/auth/me", (req, res) => {
     return res.status(404).send("user not authenticated");
   }
 });
+
+
+app.use( express.static( `${__dirname}/client/build` ) );
+
 
 //Ride Endpoints
 app.get('/api/ride_resort/:id', isAuthenticated, ridesResorts.getRidesResortByResortID);
